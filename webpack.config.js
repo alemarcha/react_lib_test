@@ -6,7 +6,7 @@ module.exports = {
     output: {
         path: __dirname + "/dist",
         filename: 'bundle.js',
-        library: 'hellolib',
+        library: 'hellolibalemarcha',
         libraryTarget: 'umd'
     },
     module: {
