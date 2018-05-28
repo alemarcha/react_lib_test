@@ -1,2 +1,5 @@
 # npmignore
 node_modules
+.babelrc
+.gitignore
+yarn.lock
