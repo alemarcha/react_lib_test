@@ -1,6 +1,6 @@
 {
   "name": "hellolibalemarcha",
-  "version": "1.0.4",
+  "version": "1.0.9",
   "description": "",
   "main": "dist/bundle.js",
   "scripts": {
@@ -20,6 +20,8 @@
   },
   "dependencies": {
     "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react-dom": "^16.4.0",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0"
   }
 }
