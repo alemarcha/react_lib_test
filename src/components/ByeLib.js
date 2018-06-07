@@ -14,11 +14,22 @@ class ByeLib extends Component {
         const { bye_value, hello_value } = this.props;
 
         return (
-            <div>Good bye World 
-                <button onClick={this.handleSubmit}>Prueba click bye</button>    
-                hola {bye_value.toString()}
-                {hello_value.toString()}
-                <Button color="danger">Danger!</Button>
+            <div className="row">
+                <div className="col-4">
+                    Good bye World 
+                    <button onClick={this.handleSubmit}>Prueba click bye</button>    
+                    hola {bye_value.toString()}
+                    {hello_value.toString()}
+                    <Button color="danger">Danger!</Button>
+                </div>
+                <div className="col-4" align="center">
+                    <p>
+                        <a href="https://github.com/alemarcha/MERN" target="_top">
+                        MERN
+                        </a>
+                    </p>
+                    <p>2018</p>
+                </div>
             </div>
         );
     }

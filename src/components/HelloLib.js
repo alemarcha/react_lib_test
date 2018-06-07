@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import { helloActions } from "../actions/hello.actions";
 import { connect } from "react-redux";
+// import { Link } from "react-router-dom";
+
 import {
     Collapse,
     Navbar,
@@ -19,9 +21,11 @@ class HelloLib extends Component {
         super(props);
         this.toggle = this.toggle.bind(this);
         this.state = {
-          isOpen: true
+          isOpen: false,
+          history: props.history
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        
       }
 
     toggle() {
@@ -39,7 +43,9 @@ class HelloLib extends Component {
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                         <NavItem>
-                            <NavLink href="/components/">Components</NavLink>
+                            <NavLink onClick={() => this.state.history.push("/")}>Components</NavLink>
+                            {/* <Link to="/hello">Go to hellos</Link> */}
+
                         </NavItem>
                         <NavItem>
                             <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
@@ -74,6 +80,7 @@ class HelloLib extends Component {
         e.preventDefault();
         const { dispatch } = this.props;
         dispatch(helloActions.helloAction());
+        this.state.history.push("/hello")
       }
 }
 
