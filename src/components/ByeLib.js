@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import { byeActions } from "../actions/bye.actions";
 import { connect } from "react-redux";
+import { Button } from 'reactstrap';
 
 class ByeLib extends Component {
     constructor(props) {
@@ -17,6 +18,7 @@ class ByeLib extends Component {
                 <button onClick={this.handleSubmit}>Prueba click bye</button>    
                 hola {bye_value.toString()}
                 {hello_value.toString()}
+                <Button color="danger">Danger!</Button>
             </div>
         );
     }
