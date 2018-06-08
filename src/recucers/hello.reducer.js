@@ -6,6 +6,7 @@ export function helloFunc(state = initialState, action) {
   switch (action.type) {
     case helloConstants.HELLO_REDUCER:
       return {
+        ...state,
         hello_value: true
       };
     default:
